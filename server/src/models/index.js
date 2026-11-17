@@ -33,7 +33,7 @@ function make(name, collection, spec, opts = {}) {
 const created = { createdAt: 'createdAt', updatedAt: false };
 
 // Standard event properties (section 4)
-const std = { platform: 'S', app_version: 'S', game_version: 'S' };
+const std = { platform: 'S', app_version: 'S', game_version: 'S' , duration_ms: 'N'};
 
 exports.User = make('User', 'users', {
   user_id: 'S!u', username: 'S', email: 'S', platform: 'S', country: 'S',
