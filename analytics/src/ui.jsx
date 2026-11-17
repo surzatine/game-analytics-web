@@ -17,7 +17,8 @@ const flat = (r) => {
   const o = {};
   for (const [k, v] of Object.entries(r)) {
     if (Array.isArray(v)) continue;
-    if (v && typeof v === 'object') Object.assign(o, flat(v)); else o[k === '_id' ? 'name' : k] = v;
+    if (v && typeof v === 'object') Object.assign(o, flat(v));
+    else o[k === '_id' ? 'name' : k] = v;
   }
   return o;
 };
